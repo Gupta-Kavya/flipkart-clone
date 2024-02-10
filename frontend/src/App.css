@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+.nav-search:focus {
+  outline: none;
+}
+
+.category-section {
+  margin: 15px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.single-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slide-container {
+  margin: 15px;
+}
+
+.product-mobiles {
+
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-top: 2px;
+  padding: 10px;
+  font-family: "Rubik", sans-serif;
+  justify-content: space-evenly;
+}
+
+.product-mobiles .item-short-details h3 {
+  font-weight: 700;
+}
+
+.product-mobiles .item-short-details ul li {
+  list-style-type: disc;
+  margin-top: 4px;
+}
+
+.product-mobiles .item-image img {
+  width: 80%;
+}
+
+.product-mobiles .sale-price h2 {
+  font-size: 25px;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.product-mobiles .item-short-details ul {
+  margin-left: 4rem;
+}
+
+.item-short-details {
+  margin-top: 10px;
+  width: 32rem;
+}
+
+.product-section .filters {
+  background-color: white;
+  width: 20%;
+  margin: 2px;
+}
+
+.product-mobiles:hover .item-title {
+  color: #2874f0;
+}
+
+.sec-category-bar .cat:hover {
+  color: #2874f0;
+}
+
+.sec-category-bar {
+  box-shadow: 0px 3px 3px rgba(128, 128, 128, 0.144);
+}
+
+.cart-page {
+  font-family: "Rubik", sans-serif;
+}
+
+.cart-price-table{
+
+vertical-align: middle;
+
+
+}
+
+
+
+
+
+
+
+.place-order{
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  background: #ff9f00;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+}
+
+
+.clear-cart{
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  background: #011639;
+  color: white;
+  font-weight: 700;
+  float: left;
+  
+}
+
+
+
+
+
+
+#quantity-selector {
+border: 1px solid rgba(128, 128, 128, 0.401);
+box-sizing: border-box;
+width: 20%;
+text-align: center;
+border-radius: 5px;
+}
+.qty {
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+input.qtyplus { width:25px; height:25px; cursor: pointer;}
+input.qtyminus { width:25px; height:25px; cursor: pointer;}
+
+.cart-product .product_image{
+display: block;
+width: 20%;
+}

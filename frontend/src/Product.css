@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+.product-image-gallery {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.132);
+  max-width: 70em;
+  width: 90vh;
+}
+
+.fnc-btns .add-to-cart {
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 48%;
+  border: none;
+  float: left;
+  background: #fb641b;
+  color: white;
+  font-weight: 700;
+}
+
+.fnc-btns .buy-now {
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 48%;
+  border: none;
+  float: right;
+  background: #ff9f00;
+  color: white;
+  font-weight: 700;
+}
+
+.fnc-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-image-gallery .product-main-image {
+  display: flex;
+  align-items: self-start;
+}
+
+.product-image-gallery .product-main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-data {
+  width: 70%;
+}
+
+.delivery-pincode input {
+  border-bottom: 3px solid #5290f4;
+  padding: 8px;
+}
+
+.delivery-pincode input:focus {
+  outline: none;
+}
+
+.product-offers ul li {
+  padding: 3px 0px 3px 25px;
+  list-style: none;
+  background-image: url("https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  word-spacing: 2px;
+}
+
+.product {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.product-thumbnails img {
+  margin-bottom: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.26);
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.product-thumbnails img:hover {
+  border: 2px solid rgba(25, 83, 220, 0.849);
+}
+
+.product-thumbnails .active {
+  border: 2px solid rgba(25, 83, 220, 0.849);
+}
+
+.product-thumbnails {
+  max-width: 5em;
+  width: 70vh;
+}
+
+.product-colour-variants img {
+  width: 13vh;
+  border: 2px solid rgba(128, 128, 128, 0.26);
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.1s ease;
+  padding: 4px;
+}
+
+.product-colour-variants img:hover {
+  border: 2px solid rgba(36, 97, 239, 0.849);
+}
+
+.product-colour-variants .active {
+  border: 2px solid rgba(34, 91, 224, 0.849);
+}
+
+.product-storage-variants .active {
+  color: rgba(17, 82, 231, 0.849);
+  font-weight: 600;
+}
