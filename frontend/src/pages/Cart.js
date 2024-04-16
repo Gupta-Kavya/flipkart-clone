@@ -196,7 +196,7 @@ const Cart = () => {
             </div>
 
             <div className="place-order-button m-5">
-              <a href={"http://localhost:3000/checkOut"} ><button className="place-order">
+              <a href={process.env.REACT_APP_FRONT_DOMAIN + "/checkOut"} ><button className="place-order">
                 CHECKOUT
               </button></a>
             </div>

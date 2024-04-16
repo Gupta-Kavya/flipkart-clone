@@ -12,7 +12,7 @@ const Mobiles = () => {
 
   const fetchProducts = async () => {
     try {
-      let url = "http://localhost:3001/fetchProducts";
+      let url = `${process.env.REACT_APP_API_DOMAIN}/fetchProducts`;
       let products = await fetch(url);
       let productJson = await products.json();
       setProductArr(productJson.Products);
@@ -30,7 +30,7 @@ const Mobiles = () => {
           {productArr.map((product, index) => {
             return (
               <Link
-                to={`http://localhost:3000/product/${product._id}/${product.productId}`}
+                to={`${process.env.REACT_APP_FRONT_DOMAIN}/product/${product._id}/${product.productId}`}
               >
                 <div className="product-mobiles flex">
                   <div className="item-image w-96">

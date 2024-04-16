@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let url = "http://localhost:3001/login";
+    let url = `${process.env.REACT_APP_API_DOMAIN}/login`;
 
     try {
       let res = await fetch(url, {
@@ -147,7 +147,7 @@ if(resJson.success === true){
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don't have an account?{" "}
                   <Link
-                    to={"http://localhost:3000/Signup"}
+                    to={`${process.env.REACT_APP_FRONT_DOMAIN}/Signup`}
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Signup here

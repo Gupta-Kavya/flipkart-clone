@@ -10,13 +10,15 @@ const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const Razorpay = require("razorpay");
 const orderSchema = require("./Models/Orders");
+require('dotenv').config();
+
 
 main().catch((err) => console.log(err));
 
 async function main() {
   try {
     await mongoose.connect(
-      "mongodb+srv://kavya:Kavya%40123@cluster0.2yivdnq.mongodb.net/flipkart"
+      process.env.MONGO_URI
     );
     console.log("Connection to Mongodb is success");
   } catch (error) {
@@ -31,8 +33,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const rzp = new Razorpay({
-  key_id: "rzp_test_riqhxVytzFMjIp",
-  key_secret: "dLqbgTPWJNkNqEvVoCrHx56x",
+  key_id: process.env.RZP_ID,
+  key_secret: process.env.RZP_SECRET,
 });
 
 app.get("/pincodes", (req, res) => {

@@ -25,7 +25,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let url = `http://localhost:3001/fetchProductById/${id}`;
+        let url = `${process.env.REACT_APP_API_DOMAIN}/fetchProductById/${id}`;
         let products = await fetch(url);
         let productJson = await products.json();
 
@@ -71,7 +71,7 @@ const Product = () => {
 
   const fetch_pincodes = async () => {
     try {
-      let pins = await fetch("http://localhost:3001/pincodes", {
+      let pins = await fetch(`${process.env.REACT_APP_API_DOMAIN}/pincodes`, {
         mode: "cors",
       });
 
@@ -125,7 +125,7 @@ const Product = () => {
     try {
       // Check if product has been fetched and has productId property
 
-      let url = `http://localhost:3001/fetchProductFilters/${pid}`;
+      let url = `${process.env.REACT_APP_API_DOMAIN}/fetchProductFilters/${pid}`;
       let filters = await fetch(url);
       let filterJson = await filters.json();
 
@@ -240,7 +240,7 @@ const Product = () => {
                 )
                 <img
                   src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
-                  style={{ width: "120px" }}
+                  style={{ width: "150px" }}
                 />
               </div>
 
@@ -347,7 +347,7 @@ const Product = () => {
 
                     return (
                       <a
-                        href={`http://localhost:3000/product/${
+                        href={`${process.env.REACT_APP_FRONT_DOMAIN}/product/${
                           productVariants[Object.keys(productVariants)[0]].id
                         }/${pid}`}
                       >
@@ -373,7 +373,7 @@ const Product = () => {
                       return Object.keys(Filters.Products[color]).map(
                         (storage) => (
                           <a
-                            href={`http://localhost:3000/product/${Filters.Products[color][storage].id}/${pid}`}
+                            href={`${process.env.REACT_APP_FRONT_DOMAIN}/product/${Filters.Products[color][storage].id}/${pid}`}
                           >
                             <button
                               className={`text-gray-900 bg-white hover:bg-gray-100 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 ${

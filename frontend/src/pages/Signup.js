@@ -49,7 +49,7 @@ if(email === null){
   });
 }else{
   if (password === confirmpass) {
-    let url = "http://localhost:3001/signup";
+    let url = `${process.env.REACT_APP_API_DOMAIN}/signup`;
     try {
       let res = await fetch(url, {
         method: "POST",
@@ -75,7 +75,7 @@ if(email === null){
             transition: Bounce,
           });
 setTimeout(() => {
-  window.location = "http://localhost:3000/login";
+  window.location = `${process.env.REACT_APP_FRONT_DOMAIN}/login`;
 }, 2000);
 
         } else {
@@ -238,7 +238,7 @@ setTimeout(() => {
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Already have an account?{" "}
                   <Link
-                    to={"http://localhost:3000/login"}
+                    to={`${process.env.REACT_APP_FRONT_DOMAIN}/signup`}
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Login here

@@ -95,7 +95,7 @@ const Checkout = () => {
         localStorage.getItem("subtotal") &&
         localStorage.getItem("subtotal") === originalText
       ) {
-        const response = await fetch("http://localhost:3001/createOrder", {
+        const response = await fetch(process.env.REACT_APP_API_DOMAIN + "/createOrder", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -106,7 +106,7 @@ const Checkout = () => {
         const orderData = await response.json(); // Assuming your API returns JSON
 
         let options = {
-          key: "rzp_test_riqhxVytzFMjIp", // Enter the Key ID generated from the Dashboard
+          key: process.env.REACT_APP_RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
           name: "FLIPKART",
           order_id: await orderData.rzpOrder.id, // Use the actual order ID received from your API response
           prefill: {
@@ -121,7 +121,7 @@ const Checkout = () => {
           handler: async function (res) {
             setLoader(true);
             const response = await fetch(
-              "http://localhost:3001/verifyPayment",
+              `${process.env.REACT_APP_API_DOMAIN}/verifyPayment`,
               {
                 method: "POST",
                 headers: {
@@ -162,14 +162,14 @@ const Checkout = () => {
               }, 1200);
 
               setTimeout(() => {
-                window.location = "http://localhost:3000/order-success";
+                window.location = process.env.REACT_APP_FRONT_DOMAIN + "/order-success";
               }, 1800);
 
               const orderid = Math.floor(Math.random() * 1000000000000 + 1);
 
               localStorage.setItem("order_id", orderid);
 
-              await fetch("http://localhost:3001/saveOrder", {
+              await fetch(process.env.REACT_APP_API_DOMAIN + "/saveOrder", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -245,7 +245,7 @@ const Checkout = () => {
         });
 
         setTimeout(() => {
-          window.location = "http://localhost:3000/viewCart";
+          window.location = process.env.REACT_APP_FRONT_DOMAIN + `/viewCart`;
         }, 1000);
       }
     }
