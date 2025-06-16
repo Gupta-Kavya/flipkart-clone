@@ -34,12 +34,11 @@ A full-featured **Flipkart Clone** built with the **MERN Stack** (MongoDB, Expre
 
 ## 📸 Screenshots
 
-> Replace the following links with your own hosted screenshots
 
-- ![Home Page](https://i.postimg.cc/q7sR3gyb/Screenshot-2025-06-17-011000.png)
-- ![Category Page](https://i.postimg.cc/4dX3bZ1J/Screenshot-2025-06-17-011114.png)
-- ![Product Page](https://i.postimg.cc/vTNHsnwB/Screenshot-2025-06-17-011125.png)
-- ![Cart](https://i.postimg.cc/h4yGxkQB/Screenshot-2025-06-17-011136.png)
+![Home Page](https://i.postimg.cc/q7sR3gyb/Screenshot-2025-06-17-011000.png)
+![Category Page](https://i.postimg.cc/4dX3bZ1J/Screenshot-2025-06-17-011114.png)
+![Product Page](https://i.postimg.cc/vTNHsnwB/Screenshot-2025-06-17-011125.png)
+![Cart](https://i.postimg.cc/h4yGxkQB/Screenshot-2025-06-17-011136.png)
 
 ---
 
